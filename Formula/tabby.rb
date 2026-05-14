@@ -32,7 +32,7 @@ class Tabby < Formula
   end
 
   service do
-    run [opt_bin/"tabby", "serve", "--device", "metal"]
+    run [opt_bin/"tabby", "serve", "--device", "metal", "--model", "CodeLlama-13B", "--port", "8989"]
     keep_alive true
     log_path f.tabby_log_path
     error_log_path f.tabby_log_path
